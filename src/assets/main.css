@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "iranYekan";
+  src: url("fonts/eot/iranyekan.eot"), url("fonts/ttf/iranyekan.ttf"),
+    url("fonts/woff/iranyekan.woff"), url("fonts/svg/iranyekan.svg");
+}
+* {
+  direction: rtl;
+  font-family: iranYekan;
+}
+body {
+  margin: 0;
+  background: #f1f1f1;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.header .navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+  height: 80px;
+  background-color: #fff;
+}
+.header .navigation a {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+.header .navigation a.router-link-exact-active {
+  color: #004de1;
+}
+.header .navigation .navigation-links {
+  gap: 39px;
+}
+
+/* login page style */
+
+.login-template {
+  min-height: calc(100vh - 80px);
+}
+.login-template .login {
+  width: 370px;
+}
+.login-template input,
+.login-template button {
+  width: 100%;
+  margin: 0;
+  border-radius: 12px;
+  border: none;
+  height: 50px;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 16px;
+}
+.login-template input {
+  background: #fff;
+  padding: 0 15px;
+  width: calc(100% - 30px);
+}
+.login-template button {
+  background: rgba(0, 77, 225, 1);
+  color: #fff;
+  cursor: pointer;
+}
+.login-template button:disabled {
+  background: rgba(0, 79, 225, 0.484);
+  color: #dadada;
+}
+
+/* note page style */
+
+.note-template {
+  min-height: calc(100vh - 80px);
+}
+.note-template .wrapper {
+  width: 600px;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.06);
+}
+.note-template .wrapper .note-section {
+  position: relative;
+}
+.note-template .wrapper .note-section .note-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.note-template .wrapper .note-section .plus-icon {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 5px;
+}
+.note-template .wrapper .note-section input {
+  width: calc(100% - 100px);
+  border-radius: 12px;
+  outline: none;
+  background-color: rgba(248, 248, 248, 1);
+  border: none;
+  height: 60px;
+  padding: 0 50px;
+  font-size: 20px;
+}
+.note-template .note-list-actions {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #9999998b;
+  margin-bottom: 0;
+}
+.note-template .note-list-actions a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
+}
+.note-template .note-list-actions .ckeck-icon {
+  margin-left: 10px;
+}
+.note-template .note-list {
+  padding: 20px 5px;
+}
+.note-template .note-list label {
+  display: block;
+  position: relative;
+  padding-right: 45px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.note-template .note-list label:hover {
+  background: #f8f8f8;
+  border-radius: 12px;
+}
+.note-template .note-list label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.note-template .note-list .checkmark {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.note-template .note-list label input:checked ~ .checkmark {
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.note-template .note-list label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.note-template .note-list label .checkmark:after {
+  right: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.note-template .note-list .remove-icon{
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
